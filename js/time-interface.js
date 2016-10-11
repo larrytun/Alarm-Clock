@@ -1,3 +1,6 @@
+function alarmTime(time) {
+  this.time = time;
+}
 
 
 function displayTime() {
@@ -9,5 +12,10 @@ function displayTime() {
 
 
 $(document).ready(function() {
-    displayTime();
+  displayTime();
+  $("#alarming").submit(function(event){
+    event.preventDefault();
+    var setTime = $("#finalAlarm").val();
+    console.log(setTime);
+  });
 });
